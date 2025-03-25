@@ -11,6 +11,7 @@
 !LICENSE
 !requirements.txt
 !af3_slime
+!inputs
 # ...even if they are in subdirectories
 #!*/
 
