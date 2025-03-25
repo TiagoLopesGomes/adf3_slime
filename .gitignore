@@ -1,0 +1,25 @@
+# Ignore everything
+*
+
+# But not these files...
+!*.py
+!README.md
+!.gitignore
+!LICENSE
+!requirements.txt
+# ...even if they are in subdirectories
+!*/
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore virtual environments
+venv/
+env/
+ENV/
+
+# Ignore IDE files
+.idea/
+.vscode/
