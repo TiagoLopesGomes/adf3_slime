@@ -3,12 +3,14 @@
 
 # But not these files...
 !*.py
+!ctir_phosphoresi.yaml
+!config_ctir_po4.yaml
 !README.md
 !.gitignore
 !LICENSE
 !requirements.txt
 # ...even if they are in subdirectories
-!*/
+#!*/
 
 # Ignore Python cache files
 __pycache__/

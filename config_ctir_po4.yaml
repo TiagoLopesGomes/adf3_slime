@@ -1,0 +1,56 @@
+# AF-SLIME Example User Configuration
+
+# Input/Output settings
+input:
+  dir: "./af3_slide_preds_ctir_shp2_nSH2_1_10_po4"  # Directory containing prediction files
+  ptm_config: "ctir_phosphoresi.yaml"           # PTM configuration file (optional)
+
+
+output:
+  metrics: "plddt_pae.png"                # pLDDT and PAE metrics output
+  contacts: "ca_contac_probs.png"         # Contact probabilities output
+  interface_metrics: "interface_metrics.png"  # Interface metrics output
+  chord_diagram: "circos.png"            # Circular chord diagram output
+  
+  # Individual cluster output filenames
+  clusters:
+    assignments: "cluster_assignments.png"  # Plot showing cluster assignments along sequence
+    features: "cluster_features.png"        # Feature importance visualization
+    dendrogram: "cluster_dendrogram.png"    # Hierarchical clustering dendrogram
+    heatmap: "cluster_heatmap.png"          # Feature heatmap with clustering
+    summary: "cluster_summary.png"          # Comprehensive cluster summary
+
+# Processing options
+processing:
+  atom_type: "CA"       # Atom type to use for analysis
+  do_relax: true        # Whether to perform relaxation (set to false to use pre-relaxed structures if available)
+  
+  # Receptor settings
+  receptor:
+    start: 1            # Starting residue number for receptor
+
+# Internal parameters
+parameters:
+  # Contact analysis parameters
+  contact_analysis:
+    top_n: 3            # Number of top contacts to average
+    threshold: 0.3      # Threshold for significant contacts
+    window_size: 3      # Window size for neighborhood calculations
+  
+  # Clustering parameters
+  clustering:
+    eps: 0.3            # Maximum distance between samples for DBSCAN
+    min_samples: 3      # Minimum samples to form a dense region in DBSCAN
+    threshold: 0.3      # Threshold for contact significance
+  
+  # Interface scoring parameters
+  interface_scoring:
+    distance_cutoff: 8.0     # Distance cutoff for contacts (Angstroms)
+    clash_threshold: 2.0     # Threshold for clash detection
+    contact_threshold: 0.5   # Threshold for contact probability
+  
+  # PTM token filtering
+  ptm_filtering:
+    keep_second_token: true  # Keep the second token (CA) for PTM residues
+    average_tokens: false     # If true, average the values across all tokens for PTM residues instead of keeping just one 
+    tokens_to_average: ["ALL"]  # Use "ALL" to average all tokens, or specify tokens like ["CA", "CB"] 
