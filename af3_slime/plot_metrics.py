@@ -24,11 +24,11 @@ import seaborn as sns
 from matplotlib.lines import Line2D
 import pyrosetta as pr
 
-from config import PTMConfig
+from ..config import PTMConfig
 from contact_clustering import analyze_contact_patterns
 from plot_clusters import visualize_contact_clusters
 from score_interface import score_interface, score_structures_parallel, init_options
-from utils import setup_logging
+from ..utils import setup_logging
 
 # Initialize PyRosetta with options before any parallel processing
 pr.init(init_options, silent=True)
