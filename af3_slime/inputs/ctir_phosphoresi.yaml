@@ -1,0 +1,9 @@
+modifications:
+  - ptmType: "PTR"
+    ptmPosition: 454
+  - ptmType: "PTR"
+    ptmPosition: 474
+  - ptmType: "PTR"
+    ptmPosition: 483
+  - ptmType: "PTR"
+    ptmPosition: 511
