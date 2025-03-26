@@ -17,13 +17,13 @@
 With AF-SLIME, you can:
 - Generate sliding window peptide fragments from a protein sequence
 - Submit these fragments to AlphaFold3 for structure prediction
-- Analyze confidence metrics (pLDDT, PAE) across all predictions
+- Analyze confidence metrics (e.g pLDDT, PAE, contact probabilities) across all predictions
 - Score protein interfaces using PyRosetta
 - Identify contact patterns and binding hotspots
 - Visualize results through comprehensive plots and contact maps
 - Analyze the effects of post-translational modifications on binding
 
-AF-SLIME is particularly useful for studying intrinsically disordered regions (IDRs) and their interactions with structured domains, especially when post-translational modifications play a key role in modulating these interactions.
+AF-SLIME is particularly useful for studying intrinsically disordered regions (IDRs), usually contaning putative SLIMs,  and their interactions with structured domains, especially when post-translational modifications play a key role in modulating these interactions.
 
 ## 🧰 Installation
 
@@ -77,7 +77,7 @@ AF-SLIME operates in two main stages:
 
 ### Main Workflow
 
-1. **Fragment Generation & Prediction**:
+1. **Fragment Generation and Prediction**:
    - Read receptor and ligand sequences from FASTA files
    - Generate overlapping peptide fragments with specified length and offset
    - Validate and incorporate post-translational modifications
@@ -85,7 +85,7 @@ AF-SLIME operates in two main stages:
    - Submit to AlphaFold3 for structure prediction
    - Collect prediction outputs (structures, confidence scores)
 
-2. **Analysis & Visualization**:
+2. **Analysis and Visualization**:
    - Collect pLDDT values across all predictions
    - Extract contact probabilities and PAE data
    - Perform interface scoring using PyRosetta

@@ -1,12 +1,12 @@
-from typing import Dict, List, Tuple, NamedTuple
-import numpy as np
-from sklearn.preprocessing import StandardScaler
-from sklearn.cluster import DBSCAN
-from scipy.cluster.hierarchy import dendrogram, linkage
-import matplotlib.pyplot as plt
-import seaborn as sns
-from dataclasses import dataclass
 import logging
+from dataclasses import dataclass
+from typing import Dict, List, Tuple
+
+import numpy as np
+from scipy.cluster.hierarchy import linkage
+from sklearn.cluster import DBSCAN
+from sklearn.preprocessing import StandardScaler
+
 
 @dataclass
 class ClusterAnalysisResults:

@@ -1,11 +1,12 @@
-import logging
-from pathlib import Path
-from config import Config
-from sequence_utils import SequenceProcessor
-from json_builder import JsonBuilder
-from af3_runner import AF3Runner
 from datetime import datetime
+from pathlib import Path
+
+from af3_runner import AF3Runner
+from config import Config
+from json_builder import JsonBuilder
+from sequence_utils import SequenceProcessor
 from utils import setup_logging
+
 
 def print_banner():
     banner = """

@@ -1,7 +1,8 @@
 import logging
 import sys
-from pathlib import Path
 from datetime import datetime
+from pathlib import Path
+
 
 def setup_logging(output_dir: Path, timestamp: str = None) -> logging.Logger:
     """Setup logging to both file and console with different levels

@@ -1,11 +1,12 @@
+from typing import Dict, Union
+
 import matplotlib.pyplot as plt
-import seaborn as sns
 import numpy as np
-from scipy.cluster.hierarchy import dendrogram
-from typing import Union, Dict
+import seaborn as sns
 
 # Change to absolute import
 from contact_clustering import ClusterAnalysisResults
+from scipy.cluster.hierarchy import dendrogram
 
 
 def plot_feature_heatmap(results: ClusterAnalysisResults, output_path: str):

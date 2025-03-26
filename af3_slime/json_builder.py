@@ -1,8 +1,9 @@
 import json
 from pathlib import Path
 from typing import List
-from config import AF3Config, PTMConfig
+
 from sequence_utils import Fragment
+
 
 class JsonBuilder:
     def __init__(self, output_dir: Path):

@@ -2,8 +2,8 @@
 
 # Input/Output settings
 input:
-  dir: "./af3_slide_preds_ctir_shp2_nSH2_1_10_po4"  # Directory containing prediction files
-  ptm_config: "ctir_phosphoresi.yaml"           # PTM configuration file (optional)
+  dir: "../af3_slide_preds_ctir_shp2_nSH2_1_10_po4"  # Directory containing prediction files
+  ptm_config: "./inputs/ctir_phosphoresi.yaml"           # PTM configuration file (optional)
 
 
 output:

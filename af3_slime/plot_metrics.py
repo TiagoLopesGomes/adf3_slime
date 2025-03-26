@@ -3,32 +3,29 @@ import json
 import logging
 import pathlib
 import re
-import sys
-import warnings
 import shutil
+import warnings
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Tuple, Optional, Any
+from typing import Any, Dict, List, Optional, Tuple
 
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import yaml
-from pycirclize import Circos
-from pycirclize.utils import calc_group_spaces, ColorCycler
-from matplotlib.patches import Patch
-from scipy.stats import sem
-from tqdm import tqdm
-import seaborn as sns
-from matplotlib.lines import Line2D
 import pyrosetta as pr
-
-from ..config import PTMConfig
+import seaborn as sns
+import yaml
+from config import PTMConfig
 from contact_clustering import analyze_contact_patterns
+from matplotlib.lines import Line2D
 from plot_clusters import visualize_contact_clusters
-from score_interface import score_interface, score_structures_parallel, init_options
-from ..utils import setup_logging
+from pycirclize import Circos
+from pycirclize.utils import calc_group_spaces
+from scipy.stats import sem
+from score_interface import init_options, score_structures_parallel
+from tqdm import tqdm
+from utils import setup_logging
 
 # Initialize PyRosetta with options before any parallel processing
 pr.init(init_options, silent=True)

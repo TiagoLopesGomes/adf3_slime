@@ -4,8 +4,7 @@ import argparse
 import logging
 import os
 from concurrent.futures import ProcessPoolExecutor
-from pathlib import Path
-from typing import List, Dict, Any, Tuple
+from typing import Any, Dict, List, Tuple
 
 import numpy as np
 import pyrosetta as pr

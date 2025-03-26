@@ -1,9 +1,9 @@
+import logging
 import os
 import subprocess
 from pathlib import Path
 from typing import List
-import logging
-from datetime import datetime
+
 
 class AF3Runner:
     def __init__(self, output_base_dir: Path, af3_script_path: Path):

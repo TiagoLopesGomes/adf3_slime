@@ -1,7 +1,8 @@
-from pathlib import Path
-from typing import List, Tuple, Dict
-from dataclasses import dataclass
 import logging
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Dict, List, Tuple
+
 from Bio import SeqIO
 from config import PTMConfig
 from ptm_resi import CCD_NAME_TO_ONE_LETTER
