@@ -3,9 +3,9 @@
 
 # But not these files...
 !*.py
-!ctir_phosphoresi.yaml
+!ptm.yaml
 !align_fragments.sh
-!config_ctir_po4.yaml
+!config.yaml
 !ligand.fasta
 !receptor.fasta
 !README.md
