@@ -3,9 +3,9 @@
 
 # But not these files...
 !*.py
-!ptm.yaml
+!./inputs/ptm.yaml
 !align_fragments.sh
-!config.yaml
+!./inputs/config.yaml
 !ligand.fasta
 !receptor.fasta
 !README.md
