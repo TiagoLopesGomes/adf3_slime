@@ -1,6 +1,9 @@
 import argparse
 import json
 import logging
+import os
+import sys
+import time
 import pathlib
 import re
 import shutil
@@ -8,7 +11,7 @@ import warnings
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple, Union
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -1346,10 +1349,10 @@ def main():
         logger.debug(f"Created plots directory at: {plots_dir.resolve()}")
     except Exception as e:
         logger.error(f"Error creating plots directory: {e}")
-        logger.error("Will use current directory for outputs")
-        plots_dir = pathlib.Path(".")
+        logger.error("Cannot continue without a valid output directory")
+        sys.exit(1)  # Exit with error instead of continuing with invalid path
 
-    # Setup logging with timestamp - AFTER resolving the base directory
+    # Setup logging with timestamp
     logger = setup_logging(plots_dir, timestamp)
     
     # Now we can use the logger
