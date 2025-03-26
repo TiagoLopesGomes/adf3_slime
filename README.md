@@ -102,7 +102,7 @@ AF-SLIME is a two-step workflow. First, you generate predictions, then you analy
 Use `main.py` to generate peptide fragments from your proteins and run AlphaFold3 predictions:
 
 ```bash
-python main.py --receptor receptor.fasta --ligand ligand.fasta --output-dir af3_slide_preds_your_project --peptide-size 10 --offset 5 --ptm-config ptm.yaml
+python main.py --receptor receptor.fasta --ligand ligand.fasta --output-dir af3_slide_preds_your_project --peptide-size 10 --offset 1 --start-residue 1 --ptm-config ptm.yaml
 ```
 
 #### Command-line Arguments for main.py:
@@ -114,7 +114,7 @@ python main.py --receptor receptor.fasta --ligand ligand.fasta --output-dir af3_
 | `--output-dir` | Directory to store prediction outputs (default: "af3_predictions") |
 | `--peptide-size` | Size of each peptide fragment (default: 10 residues) |
 | `--offset` | Offset between consecutive fragments (default: 5 residues) |
-| `--start-residue` | Starting residue number for the first fragment (default: 1) |
+| `--start-residue` | Starting residue number for the first ligand fragment |
 | `--ptm-config` | Path to YAML file containing PTM configurations (optional) |
 | `--af3-script-path` | Path to the AlphaFold3 run script (default: "~/software/alphafold3/run/run_af3.py") |
 
