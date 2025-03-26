@@ -37,8 +37,8 @@ AF-SLIME is particularly useful for studying intrinsically disordered regions (I
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/TiagoLopesGomes/af_slime.git
-   cd af-slime
+   git clone https://github.com/TiagoLopesGomes/af3_slime.git
+   cd af3_slime
    ```
 
 2. **Create a conda environment** (recommended)
