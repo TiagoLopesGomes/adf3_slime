@@ -6,6 +6,8 @@
 !ctir_phosphoresi.yaml
 !align_fragments.sh
 !config_ctir_po4.yaml
+!ligand.fasta
+!receptor.fasta
 !README.md
 !.gitignore
 !LICENSE
