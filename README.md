@@ -246,8 +246,3 @@ If you use AF-SLIME in your research, please cite:
 ```
 [Citation information]
 ```
-
-## 📝 License
-
-This project is licensed under the GNU License - see the LICENSE file for details.
-</div> 
